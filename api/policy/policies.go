@@ -39,6 +39,7 @@ func ReplacePolicyVariables(claims map[string]interface{}, accountInfo *madmin.A
 func replaceJwtVariables(rawPolicy []byte, claims map[string]interface{}) json.RawMessage {
 	// list of valid JWT fields we will replace in policy if they are in the response
 	jwtFields := []string{
+		"oid",
 		"sub",
 		"iss",
 		"aud",
